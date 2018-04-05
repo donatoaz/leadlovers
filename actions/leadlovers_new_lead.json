@@ -1,0 +1,96 @@
+{
+	"name": {
+    "pt_BR": "Criar lead",
+    "en": "Create lead"
+  },
+  "action_key": "new_lead",
+  "description": {
+  	"pt_BR": "Criar lead",
+    "en": "Create lead"
+  },
+  "action_fields": {
+    "fields": [
+        {
+            "key": "Email",
+            "name": { "pt_BR": "email", "en": "email" },
+            "description": {
+                "pt_BR": "Email",
+                "en": "Email"
+            },
+            "required": true,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string",
+        },
+        {
+            "key": "Name",
+            "name": { "pt_BR": "nome", "en": "name" },
+            "description": {
+                "pt_BR": "Nome",
+                "en": "Name"
+            },
+            "required": true,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string",
+        },
+        {
+            "key": "MachineCode",
+            "name": { "pt_BR": "código maquina", "en": "machine code" },
+            "description": {
+                "pt_BR": "Código da máquina",
+                "en": "Machine Code"
+            },
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+              "type": "remote",
+              "helper_method": "machine_code_list"
+            }
+        },
+        {
+            "key": "EmailSequenceCode",
+            "name": { "pt_BR": "código sequencia email", "en": "email sequence code" },
+            "description": {
+                "pt_BR": "Código de sequencia de email",
+                "en": "Email Sequence Code"
+            },
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+              "type": "remote",
+              "helper_method": "email_sequence_code_list"
+            }
+        },
+        {
+            "key": "SequenceLevelCode",
+            "name": { "pt_BR": "código nivel sequencia", "en": "sequence level code" },
+            "description": {
+                "pt_BR": "Código de nível de sequencia",
+                "en": "Sequence Level Code"
+            },
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+              "type": "remote",
+              "helper_method": "sequence_level_code_list"
+            }
+        }
+    ]
+  },
+  "request": {
+    "method_name": "/lead",
+    "verb": "post",
+    "json_api": true,
+    "error_fields" : ["errors"]
+  }
+}

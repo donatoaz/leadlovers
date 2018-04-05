@@ -1,0 +1,19 @@
+{
+  "name": "lista dos códigos de sequencia de nível do email",
+  "helper_method_key": "sequence_level_code_list",
+  "requests": [
+  	{
+      "method_name": "/levels",
+      "response_field": "Items",
+      "params": {"machineCode": "{MachineCode}", "sequencecode": "{EmailSequenceCode}"},
+      "mapping": {
+        "label": {
+          "fields": ["Subject"]
+        },
+        "value": {
+          "field": "Sequence"
+        }
+      }
+    }
+  ]
+}

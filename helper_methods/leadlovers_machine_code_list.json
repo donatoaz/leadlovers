@@ -1,0 +1,19 @@
+{
+  "name": "lista dos códigos da maquina",
+  "helper_method_key": "machine_code_list",
+  "requests": [
+  	{
+      "method_name": "/machines",
+      "response_field": "Items",
+      "params": {},
+      "mapping": {
+        "label": {
+          "fields": ["MachineName"]
+        },
+        "value": {
+          "field": "MachineCode"
+        }
+      }
+    }
+  ]
+}
