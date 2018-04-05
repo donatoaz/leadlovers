@@ -1,0 +1,35 @@
+{
+  "name": "Leadlovers",
+  "app_id": "leadlovers",
+  "color": "#03363d",
+  "description": {
+    "pt_BR": "Leadlovers é uma plataforma de automação de marketing digital. Ideal para atrair novos leads para seu negócio, transformar leads em clientes, criar sequências de email marketing, construir páginas personalizadas e muito mais.",
+    "en": "Leadlovers is a digital marketing automation platform. Perfect to attract new leads to your business, turn these leads into clients, build email marketing sequences, create your own web pages and so much more."
+	},
+  "website": "http://www.leadlovers.com",
+  "signup_url": "http://leadlovers.com/assinar",
+  "api_base_uri": {
+    "production": {
+			"uri": "http://llapi.leadlovers.com/webapi",
+			"label": "Produção",
+			"default": true
+		}
+  },
+  "authentication": {
+    "type": "pass_through_query_string",
+    "headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6IldlYkFwaSIsInN1YiI6IldlYkFwaSIsInJvbGUiOlsicmVhZCIsIndyaXRlIl0sImlzcyI6Imh0dHA6Ly93ZWJhcGlsbC5henVyZXdlYnNpdGVzLm5ldCIsImF1ZCI6IjFhOTE4YzA3NmE1YjQwN2Q5MmJkMjQ0YTUyYjZmYjc0IiwiZXhwIjoxNjA1NDQxMzM4LCJuYmYiOjE0NzU4NDEzMzh9.YIIpOycEAVr_xrJPLlEgZ4628pLt8hvWTCtjqPTaWMs",
+    "fields": [
+      {
+        "name": "token",
+        "label": "Token",
+        "type": "text",
+        "validations": [
+          {"name": "min_length", "value": 20}
+        ]
+      },
+    ],
+    "ping_request": {
+    	"method_name": "/user"
+  	}
+  }
+}
