@@ -5,7 +5,7 @@
   	{
       "method_name": "/levels",
       "response_field": "Items",
-      "params": {"machineCode": "{MachineCode}", "sequencecode": "{EmailSequenceCode}"},
+      "params": {"machineCode": "{MachineCode}", "sequenceCode": "{EmailSequenceCode}"},
       "mapping": {
         "label": {
           "fields": ["Subject"]

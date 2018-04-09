@@ -111,7 +111,6 @@
   "request": {
     "method_name": "/lead",
     "verb": "patch",
-    "json_api": true,
-    "error_fields" : ["errors"]
+    "json_api": true
   }
 }
