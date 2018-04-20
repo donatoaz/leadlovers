@@ -20,7 +20,7 @@
             "required": true,
             "visible": true,
             "field_type": "custom",
-            "data_type": "string",
+            "data_type": "string"
         },
         {
             "key": "Name",
@@ -32,7 +32,80 @@
             "required": true,
             "visible": true,
             "field_type": "custom",
-            "data_type": "string",
+            "data_type": "string"
+        },
+        {
+            "key": "Phone",
+            "name": { "pt_BR": "telefone", "en": "phone" },
+            "description": {
+                "pt_BR": "Telefone",
+                "en": "Phone"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "Birthday",
+            "name": { "pt_BR": "nascimento", "en": "birthday" },
+            "description": {
+                "pt_BR": "Data de Nascimento",
+                "en": "Birthday"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "datetime",
+            "date_format":"%Y-%m-%d"
+        },
+        {
+            "key": "City",
+            "name": { "pt_BR": "cidade", "en": "city" },
+            "description": {
+                "pt_BR": "Cidade",
+                "en": "Cidade"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "State",
+            "name": { "pt_BR": "Estado", "en": "State" },
+            "description": {
+                "pt_BR": "Estado",
+                "en": "State"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "Company",
+            "name": { "pt_BR": "Empresa", "en": "Company" },
+            "description": {
+                "pt_BR": "Empresa",
+                "en": "Company"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "Gender",
+            "name": { "pt_BR": "Gênero", "en": "Gender" },
+            "description": {
+                "pt_BR": "Gênero",
+                "en": "Gender"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
         },
         {
             "key": "MachineCode",
@@ -89,7 +162,7 @@
   },
   "request": {
     "method_name": "/lead",
-    "verb": "post",
+    "verb": "put",
     "json_api": true
   }
 }

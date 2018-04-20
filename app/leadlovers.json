@@ -26,7 +26,7 @@
         "validations": [
           {"name": "min_length", "value": 20}
         ]
-      },
+      }
     ],
     "ping_request": {
     	"method_name": "/user"
