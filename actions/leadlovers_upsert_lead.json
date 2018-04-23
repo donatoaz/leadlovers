@@ -161,7 +161,7 @@
     ]
   },
   "request": {
-    "method_name": "/lead",
+    "method_name": "/lead?token={token}",
     "verb": "put",
     "json_api": true
   }

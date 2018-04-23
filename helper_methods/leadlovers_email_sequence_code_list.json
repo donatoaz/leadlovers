@@ -3,9 +3,9 @@
   "helper_method_key": "email_sequence_code_list",
   "requests": [
   	{
-      "method_name": "/emailsequences",
+      "method_name": "/emailsequences?token={token}&machineCode={machineCode}",
       "response_field": "Items",
-      "params": {"machineCode": "{MachineCode}"},
+      "params": {},
       "mapping": {
         "label": {
           "fields": ["SequenceName"]

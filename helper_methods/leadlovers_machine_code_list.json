@@ -3,7 +3,7 @@
   "helper_method_key": "machine_code_list",
   "requests": [
   	{
-      "method_name": "/machines",
+      "method_name": "/machines?token={token}",
       "response_field": "Items",
       "params": {},
       "mapping": {
