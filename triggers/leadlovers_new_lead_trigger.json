@@ -1,0 +1,95 @@
+{
+  "name":{
+    "pt_BR":"Lead Criado",
+    "en":"Lead created"
+  },
+  "trigger_key":"new_lead",
+  "description":{
+    "pt_BR":"Quando um lead for criado.",
+    "en":"When a lead is created."
+  },
+  "trigger_fields":{
+    "type":"local",
+    "fields":[
+      {
+        "key":"Id",
+        "name":"ID",
+        "description":"ID.",
+        "field_type":"integer"
+      },
+      {
+        "key":"Email",
+        "name":"Email",
+        "description":"Email.",
+        "field_type":"string"
+      },
+      {
+        "key":"CreatedDate",
+        "name":"Data/Hora",
+        "description":"Data/Hora.",
+        "field_type":"date_time"
+      },
+      {
+        "key":"FixedFieldsEntity.Name",
+        "name":"Nomes do Lead",
+        "description":"Nomes do lead",
+        "field_type":"string"
+      },
+      {
+        "key":"FixedFieldsEntity.Phone",
+        "name":"Telefone de Contato do Lead",
+        "description":"Telefone de contato do lead",
+        "field_type":"string"
+      },
+      {
+        "key":"FixedFieldsEntity.BirthDate",
+        "name":"Data de Nascimento do Lead",
+        "description":"Data de nascimento do lead.",
+        "field_type":"date_time"
+      },
+      {
+        "key":"FixedFieldsEntity.Company",
+        "name":"Empresa do Lead",
+        "description":"Empresa do lead",
+        "field_type":"string"
+      },
+      {
+        "key":"FixedFieldsEntity.City",
+        "name":"Cidade do Lead",
+        "description":"Cidade do lead",
+        "field_type":"string"
+      },
+      {
+        "key":"FixedFieldsEntity.State",
+        "name":"Estado (UF) do Lead",
+        "description":"Estado (UF) do lead",
+        "field_type":"string"
+      }
+    ]
+  },
+  "trigger_type":"rest_hook",
+  "webhook":{
+    "message_type":"object",
+    "rest_hook_config":{
+      "create": {
+        "verb": "POST",
+        "method_name": "/RestHook?token={token}&applicationName=Pluga",
+        "params": {
+          "Target_url": "{O que colocar aqui?}",
+          "Event": "new_lead_event"
+        }
+      },
+      "delete":{
+        "verb":"DELETE",
+        "method_name": "/RestHook?token={token}&applicationName=Pluga",
+        "params":{
+          "Subscription_url": "{O que colocar aqui?}",
+          "Event": "new_lead_event"
+        }
+      }
+    },
+    "idempotent":[
+      {"type":"body", "field":"Id"}
+    ]
+  }
+}
