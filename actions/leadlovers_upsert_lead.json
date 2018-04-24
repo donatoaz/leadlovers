@@ -114,11 +114,19 @@
                 "pt_BR": "Código da máquina",
                 "en": "Machine Code"
             },
+            "label": {
+              "pt_BR": "Selecione a Máquina",
+              "en": "Select the Machine"
+            },
+            "placeholder": {
+              "pt_BR": "Selecione a Máquina",
+              "en": "Select the Machine"
+            },
             "required": true,
             "visible": true,
             "advanced": false,
             "field_type": "dropdown",
-            "data_type": "string",
+            "data_type": "integer",
             "list": {
               "type": "remote",
               "helper_method": "machine_code_list"
@@ -130,6 +138,14 @@
             "description": {
                 "pt_BR": "Código de sequencia de email",
                 "en": "Email Sequence Code"
+            },
+            "label": {
+              "pt_BR": "Selecione o Código de Sequência do Email",
+              "en": "Select the Email Sequence Code"
+            },
+            "placeholder": {
+              "pt_BR": "Selecione o Código de Sequência de email",
+              "en": "Select the Email Sequence Code"
             },
             "required": true,
             "visible": true,
@@ -147,6 +163,14 @@
             "description": {
                 "pt_BR": "Código de nível de sequencia",
                 "en": "Sequence Level Code"
+            },
+            "label": {
+              "pt_BR": "Selecione o Sequencial de Nível",
+              "en": "Select the Level Sequence"
+            },
+            "placeholder": {
+              "pt_BR": "Selecione o Sequencial de Nível",
+              "en": "Select the Sequence Level Code"
             },
             "required": true,
             "visible": true,
