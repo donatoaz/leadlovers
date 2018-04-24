@@ -3,9 +3,10 @@
   "helper_method_key": "sequence_level_code_list",
   "requests": [
   	{
-      "method_name": "/levels?token={token}&MachineCode={MachineCode}&SequenceCode={SequenceCode}",
+      "method_name": "/levels",
       "response_field": "Items",
-      "params": { "MachineCode": "{MachineCode}", "SequenceCode": "{SequenceCode}" },
+      "params": { "MachineCode": "{MachineCode}" },
+      "extra_params": [{ "key": "EmailSequenceCode", "alias": "SequenceCode" }],
       "mapping": {
         "label": {
           "fields": ["Subject"]

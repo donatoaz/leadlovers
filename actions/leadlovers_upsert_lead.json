@@ -151,7 +151,7 @@
             "visible": true,
             "advanced": false,
             "field_type": "dropdown",
-            "data_type": "string",
+            "data_type": "integer",
             "list": {
               "type": "remote",
               "helper_method": "email_sequence_code_list"
@@ -176,7 +176,7 @@
             "visible": true,
             "advanced": false,
             "field_type": "dropdown",
-            "data_type": "string",
+            "data_type": "integer",
             "list": {
               "type": "remote",
               "helper_method": "sequence_level_code_list"
