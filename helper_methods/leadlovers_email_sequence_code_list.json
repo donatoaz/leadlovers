@@ -3,7 +3,7 @@
   "helper_method_key": "email_sequence_code_list",
   "requests": [
   	{
-      "method_name": "/emailsequences?token={token}&MachineCode={MachineCode}",
+      "method_name": "/emailsequences",
       "response_field": "Items",
       "params": { "MachineCode": "{MachineCode}" },
       "mapping": {
