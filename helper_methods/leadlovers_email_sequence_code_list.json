@@ -1,0 +1,19 @@
+{
+  "name": "lista dos códigos de sequencia de email",
+  "helper_method_key": "email_sequence_code_list",
+  "requests": [
+  	{
+      "method_name": "/emailsequences?token={token}&MachineCode={MachineCode}",
+      "response_field": "Items",
+      "params": { "MachineCode": "{MachineCode}" },
+      "mapping": {
+        "label": {
+          "fields": ["SequenceName"]
+        },
+        "value": {
+          "field": "SequenceCode"
+        }
+      }
+    }
+  ]
+}

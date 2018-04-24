@@ -1,0 +1,192 @@
+{
+	"name": {
+    "pt_BR": "Criar lead",
+    "en": "Create lead"
+  },
+  "action_key": "new_lead",
+  "description": {
+  	"pt_BR": "Criar lead",
+    "en": "Create lead"
+  },
+  "action_fields": {
+    "fields": [
+        {
+            "key": "Email",
+            "name": { "pt_BR": "email", "en": "email" },
+            "description": {
+                "pt_BR": "Email",
+                "en": "Email"
+            },
+            "required": true,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "Name",
+            "name": { "pt_BR": "nome", "en": "name" },
+            "description": {
+                "pt_BR": "Nome",
+                "en": "Name"
+            },
+            "required": true,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "Phone",
+            "name": { "pt_BR": "telefone", "en": "phone" },
+            "description": {
+                "pt_BR": "Telefone",
+                "en": "Phone"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "Birthday",
+            "name": { "pt_BR": "nascimento", "en": "birthday" },
+            "description": {
+                "pt_BR": "Data de Nascimento",
+                "en": "Birthday"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "datetime",
+            "date_format":"%Y-%m-%d"
+        },
+        {
+            "key": "City",
+            "name": { "pt_BR": "cidade", "en": "city" },
+            "description": {
+                "pt_BR": "Cidade",
+                "en": "Cidade"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "State",
+            "name": { "pt_BR": "Estado", "en": "State" },
+            "description": {
+                "pt_BR": "Estado",
+                "en": "State"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "Company",
+            "name": { "pt_BR": "Empresa", "en": "Company" },
+            "description": {
+                "pt_BR": "Empresa",
+                "en": "Company"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "Gender",
+            "name": { "pt_BR": "Gênero", "en": "Gender" },
+            "description": {
+                "pt_BR": "Gênero",
+                "en": "Gender"
+            },
+            "required": false,
+            "visible": true,
+            "field_type": "custom",
+            "data_type": "string"
+        },
+        {
+            "key": "MachineCode",
+            "name": { "pt_BR": "código maquina", "en": "machine code" },
+            "description": {
+                "pt_BR": "Código da máquina",
+                "en": "Machine Code"
+            },
+            "label": {
+              "pt_BR": "Selecione a Máquina",
+              "en": "Select the Machine"
+            },
+            "placeholder": {
+              "pt_BR": "Selecione a Máquina",
+              "en": "Select the Machine"
+            },
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "integer",
+            "list": {
+              "type": "remote",
+              "helper_method": "machine_code_list"
+            }
+        },
+        {
+            "key": "EmailSequenceCode",
+            "name": { "pt_BR": "código sequencia email", "en": "email sequence code" },
+            "description": {
+                "pt_BR": "Código de sequencia de email",
+                "en": "Email Sequence Code"
+            },
+            "label": {
+              "pt_BR": "Selecione o Código de Sequência do Email",
+              "en": "Select the Email Sequence Code"
+            },
+            "placeholder": {
+              "pt_BR": "Selecione o Código de Sequência de email",
+              "en": "Select the Email Sequence Code"
+            },
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+              "type": "remote",
+              "helper_method": "email_sequence_code_list"
+            }
+        },
+        {
+            "key": "SequenceLevelCode",
+            "name": { "pt_BR": "código nivel sequencia", "en": "sequence level code" },
+            "description": {
+                "pt_BR": "Código de nível de sequencia",
+                "en": "Sequence Level Code"
+            },
+            "label": {
+              "pt_BR": "Selecione o Sequencial de Nível",
+              "en": "Select the Level Sequence"
+            },
+            "placeholder": {
+              "pt_BR": "Selecione o Sequencial de Nível",
+              "en": "Select the Sequence Level Code"
+            },
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "string",
+            "list": {
+              "type": "remote",
+              "helper_method": "sequence_level_code_list"
+            }
+        }
+    ]
+  },
+  "request": {
+    "method_name": "/lead?token={token}",
+    "verb": "put",
+    "json_api": true
+  }
+}
