@@ -82,12 +82,12 @@
         "verb":"DELETE",
         "method_name": "/RestHook?token={token}&applicationName=Pluga",
         "params":{
-          "Subscription_url": "{url}",
-          "Event": "new_lead_event"
+          "Id": "{id}"
         }
       },
       "meta_params": {
-        "webhook_url": "Target_url"
+        "webhook_url": "Target_url",
+        "webhook_id": "Id"
       }
     },
     "idempotent":[
