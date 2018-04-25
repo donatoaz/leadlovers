@@ -83,6 +83,9 @@
         "method_name": "/RestHook?token={token}&applicationName=Pluga",
         "params":{
           "Id": "{id}"
+        },
+        "body":{
+          "key": "Id"
         }
       },
       "meta_params": {
