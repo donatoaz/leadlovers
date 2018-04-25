@@ -12,14 +12,14 @@
     "fields": [
         {
             "key": "MachineCode",
-            "name": { "pt_BR": "selecione maquina", "en": "select machine" },
+            "name": { "pt_BR": "maquina", "en": "machine" },
             "description": {
                 "pt_BR": "Máquina",
                 "en": "Machine"
             },
             "label": {
-              "pt_BR": "Selecione a Máquina",
-              "en": "Select the Machine"
+              "pt_BR": "Máquina",
+              "en": "Machine"
             },
             "placeholder": {
               "pt_BR": "Selecionar Máquina",
