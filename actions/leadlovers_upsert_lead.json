@@ -11,6 +11,81 @@
   "action_fields": {
     "fields": [
         {
+            "key": "MachineCode",
+            "name": { "pt_BR": "maquina", "en": "machine" },
+            "description": {
+                "pt_BR": "Máquina",
+                "en": "Machine"
+            },
+            "label": {
+              "pt_BR": "Máquina",
+              "en": "Machine"
+            },
+            "placeholder": {
+              "pt_BR": "Selecionar Máquina",
+              "en": "Select Machine"
+            },
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "integer",
+            "list": {
+              "type": "remote",
+              "helper_method": "machine_code_list"
+            }
+        },
+        {
+            "key": "EmailSequenceCode",
+            "name": { "pt_BR": "funil", "en": "funnel" },
+            "description": {
+                "pt_BR": "Funil de leads",
+                "en": "Leads funnel"
+            },
+            "label": {
+              "pt_BR": "Funil",
+              "en": "Funnel"
+            },
+            "placeholder": {
+              "pt_BR": "Selecionar funil",
+              "en": "Select funnel"
+            },
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "integer",
+            "list": {
+              "type": "remote",
+              "helper_method": "email_sequence_code_list"
+            }
+        },
+        {
+            "key": "SequenceLevelCode",
+            "name": { "pt_BR": "item funil", "en": "funnel item" },
+            "description": {
+                "pt_BR": "Item/Passo do funil",
+                "en": "Item/Sequence of funnel"
+            },
+            "label": {
+              "pt_BR": "Item do funil",
+              "en": "Funnel item"
+            },
+            "placeholder": {
+              "pt_BR": "Selecionar item do funil",
+              "en": "Select funnel item"
+            },
+            "required": true,
+            "visible": true,
+            "advanced": false,
+            "field_type": "dropdown",
+            "data_type": "integer",
+            "list": {
+              "type": "remote",
+              "helper_method": "sequence_level_code_list"
+            }
+        },
+        {
             "key": "Email",
             "name": { "pt_BR": "email", "en": "email" },
             "description": {
@@ -48,7 +123,7 @@
         },
         {
             "key": "Birthday",
-            "name": { "pt_BR": "nascimento", "en": "birthday" },
+            "name": { "pt_BR": "Data de Nascimento", "en": "Birthday date" },
             "description": {
                 "pt_BR": "Data de Nascimento",
                 "en": "Birthday"
@@ -57,7 +132,8 @@
             "visible": true,
             "field_type": "custom",
             "data_type": "datetime",
-            "date_format":"%Y-%m-%d"
+            "date_format":"%Y-%m-%d",
+            "advanced": true
         },
         {
             "key": "City",
@@ -69,7 +145,8 @@
             "required": false,
             "visible": true,
             "field_type": "custom",
-            "data_type": "string"
+            "data_type": "string",
+            "advanced": true
         },
         {
             "key": "State",
@@ -81,7 +158,8 @@
             "required": false,
             "visible": true,
             "field_type": "custom",
-            "data_type": "string"
+            "data_type": "string",
+            "advanced": true
         },
         {
             "key": "Company",
@@ -93,7 +171,8 @@
             "required": false,
             "visible": true,
             "field_type": "custom",
-            "data_type": "string"
+            "data_type": "string",
+            "advanced": true
         },
         {
             "key": "Gender",
@@ -105,82 +184,8 @@
             "required": false,
             "visible": true,
             "field_type": "custom",
-            "data_type": "string"
-        },
-        {
-            "key": "MachineCode",
-            "name": { "pt_BR": "código maquina", "en": "machine code" },
-            "description": {
-                "pt_BR": "Código da máquina",
-                "en": "Machine Code"
-            },
-            "label": {
-              "pt_BR": "Selecione a Máquina",
-              "en": "Select the Machine"
-            },
-            "placeholder": {
-              "pt_BR": "Selecione a Máquina",
-              "en": "Select the Machine"
-            },
-            "required": true,
-            "visible": true,
-            "advanced": false,
-            "field_type": "dropdown",
-            "data_type": "integer",
-            "list": {
-              "type": "remote",
-              "helper_method": "machine_code_list"
-            }
-        },
-        {
-            "key": "EmailSequenceCode",
-            "name": { "pt_BR": "código sequencia email", "en": "email sequence code" },
-            "description": {
-                "pt_BR": "Código de sequencia de email",
-                "en": "Email Sequence Code"
-            },
-            "label": {
-              "pt_BR": "Selecione o Código de Sequência do Email",
-              "en": "Select the Email Sequence Code"
-            },
-            "placeholder": {
-              "pt_BR": "Selecione o Código de Sequência de email",
-              "en": "Select the Email Sequence Code"
-            },
-            "required": true,
-            "visible": true,
-            "advanced": false,
-            "field_type": "dropdown",
-            "data_type": "integer",
-            "list": {
-              "type": "remote",
-              "helper_method": "email_sequence_code_list"
-            }
-        },
-        {
-            "key": "SequenceLevelCode",
-            "name": { "pt_BR": "código nivel sequencia", "en": "sequence level code" },
-            "description": {
-                "pt_BR": "Código de nível de sequencia",
-                "en": "Sequence Level Code"
-            },
-            "label": {
-              "pt_BR": "Selecione o Sequencial de Nível",
-              "en": "Select the Level Sequence"
-            },
-            "placeholder": {
-              "pt_BR": "Selecione o Sequencial de Nível",
-              "en": "Select the Sequence Level Code"
-            },
-            "required": true,
-            "visible": true,
-            "advanced": false,
-            "field_type": "dropdown",
-            "data_type": "integer",
-            "list": {
-              "type": "remote",
-              "helper_method": "sequence_level_code_list"
-            }
+            "data_type": "string",
+            "advanced": true
         }
     ]
   },

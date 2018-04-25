@@ -29,7 +29,7 @@
       }
     ],
     "ping_request": {
-    	"method_name": "/user?token={token}"
+    	"method_name": "/user"
   	}
   }
 }
