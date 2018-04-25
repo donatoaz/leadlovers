@@ -75,7 +75,6 @@
         "verb": "POST",
         "method_name": "/RestHook?token={token}&applicationName=Pluga",
         "params": {
-          "Target_url": "{O que colocar aqui?}",
           "Event": "new_lead_event"
         }
       },
@@ -83,9 +82,12 @@
         "verb":"DELETE",
         "method_name": "/RestHook?token={token}&applicationName=Pluga",
         "params":{
-          "Subscription_url": "{O que colocar aqui?}",
+          "Subscription_url": "{url}",
           "Event": "new_lead_event"
         }
+      },
+      "meta_params": {
+        "webhook_url": "Target_url"
       }
     },
     "idempotent":[
